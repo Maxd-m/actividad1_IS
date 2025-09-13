@@ -1,0 +1,57 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #f4f4f4;
+  transition: background-color 0.8s ease; /* 👈 transición suave */
+}
+
+/* Estilo para el título */
+h1 {
+color: #333;
+}
+/* Estilo para el párrafo */
+p {
+color: #666;
+font-size: 18px;
+}
+/* Estilo para el botón */
+button {
+padding: 10px 20px;
+font-size: 16px;
+border: none;
+background-color: #007BFF;
+color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+button:hover {
+background-color: #0056b3;
+}
+
+img{
+width: 200px;
+height: auto;
+border-radius: 50%;
+}
+
+reloj {
+      padding: 20px 40px;
+      border: 3px solid #00ffcc;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #00ffcc;
+    }
+
+    /* Transiciones para el cambio de integrantes */
+#memebers {
+  transition: opacity 0.5s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
