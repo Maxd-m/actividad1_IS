@@ -2,10 +2,10 @@
 const button = document.getElementById("colorButton");
 const switchButton = document.getElementById("switchButton");
 // Creamos un arreglo con algunos colores
-const colors = ["#f4f4f4", "#ffcccc", "#ccffcc", "#ccccff", "#ffffcc"];
+const colors = [ "#ffcccc", "#ccffcc", "#ccccff", "#ffffcc", "#f4f4f4",];
 const members = [
-  { photo: "alumno1.png", name: "Alumno 1", desc: "descripcion ..." },
   { photo: "alumno2.png", name: "Alumno 2", desc: "descripcion ..." },
+  { photo: "alumno1.png", name: "Alumno 1", desc: "Alumno de ingenieria en sistemas computacionales de 7mo semestre que no le gusta hacer tarea" },
 ];
 // Variable para llevar el control del color actual
 let index = 0;
@@ -32,7 +32,7 @@ button.addEventListener("click", function () {
       minutos = minutos < 10 ? "0" + minutos : minutos;
       segundos = segundos < 10 ? "0" + segundos : segundos;
 
-      document.getElementById("reloj").textContent =
+      document.getElementById("reloj").textContent ="Hora actual:   "+ 
         `${horas}:${minutos}:${segundos}`;
     }
 
