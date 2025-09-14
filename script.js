@@ -3,6 +3,7 @@ const button = document.getElementById("colorButton");
 const switchButton = document.getElementById("switchButton");
 // Creamos un arreglo con algunos colores
 const colors = ["#ffcccc", "#ccffcc", "#ccccff", "#ffffcc", "#f4f4f4"];
+// arreglo con los integrantes
 const members = [
   {
     photo: "alumno1.png",
@@ -19,9 +20,9 @@ const members = [
   },
 ];
 
+// Seleccionamos los contenedores donde se agregarán los botones
 const buttonsContainer = document.getElementById("memberButtons");
 const container = document.getElementById("memebers");
-
 const memberButtonsContainer = document.getElementById("memberButtons");
 const card = document.querySelector(".card");
 const cardImg = card.querySelector(".card-img img");
@@ -52,7 +53,7 @@ function actualizarReloj() {
   minutos = minutos < 10 ? "0" + minutos : minutos;
   segundos = segundos < 10 ? "0" + segundos : segundos;
 
-
+  // Mostrar en el elemento con id="reloj"
   document.getElementById("reloj").innerHTML =
     `<span class="text_hora">Hora actual:</span><br><br><span class="hora">${horas}` +
     "\n" +
@@ -66,7 +67,7 @@ setInterval(actualizarReloj, 1000);
 actualizarReloj();
 
 // ===========================
-// 🔹 Mostrar botones por integrante
+// Mostrar botones por integrante
 // ===========================
 
 // Crear un botón por cada integrante
@@ -78,13 +79,14 @@ members.forEach((member, i) => {
   buttonsContainer.appendChild(btn);
 });
 
+// Mostrar integrante deseado
 function showMember(i) {
   if (!card) return;
 
-  // animación si tienes clases CSS 'fade-out'/'fade-in' (si no, funciona igual)
+  // animación css
   card.classList.add("fade-out");
 
-  // esperar un poco para que se vea la transición (si no hay CSS, el timeout aún evita parpadeos)
+  // esperar un poco para que se vea la transición
   setTimeout(() => {
     // actualizar contenido de la tarjeta
     cardImg.src = `img/${members[i].photo}`;
@@ -93,16 +95,8 @@ function showMember(i) {
     cardName.textContent = members[i].name;
     cardDesc.textContent = members[i].desc;
 
-    // actualizar estado de dots (clase 'active')
-    const dots = cardDots.querySelectorAll(".dot");
-    dots.forEach((d) =>
-      d.classList.toggle("active", Number(d.dataset.index) === i),
-    );
-
     card.classList.remove("fade-out");
     card.classList.add("fade-in");
     setTimeout(() => card.classList.remove("fade-in"), 350);
   }, 180);
 }
-
-

@@ -8,33 +8,49 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <img src="img/logo.png" alt="Logo" class="logo" />
+    <!-- contenedor encabezados -->
+    <div class="wrap_cont">
 
-    <div class="header">
-      <div class="titles">
-        <h1>Proyecto de equipo</h1>
-        <h2>THE LEVER TEAM</h2>
+      <!-- logo -->
+      <div>
+        <img src="img/logo.png" alt="Logo" class="logo" />
       </div>
-      <h3>
-        <div id="reloj"></div>
-      </h3>
+
+      <!-- titulos -->
+      <div class="header">
+        <div class="titles">
+          <h1>Proyecto de equipo</h1>
+          <h2>THE LEVER TEAM</h2>
+        </div>
+      </div>
+
+      <!-- reloj -->
+      <div>
+        <h3 id="reloj_cont">
+          <div id="reloj"></div>
+        </h3>
+      </div>
     </div>
 
+    <!-- tarjeta presentacion alumnos -->
     <div class="card">
+      <!-- imagen -->
       <div class="card-img">
         <img src="img/alumno1.png" alt="foto alumno" />
       </div>
+      <!-- contenido -->
       <div class="card-content">
         <h3>Alumno 1</h3>
         <h4>Max Díaz Miranda</h4>
         <p>Alumno de sistemas en 7mo semestre que no le gusta hacer tarea.</p>
       </div>
+      <!-- Puntos decorativos -->
       <div class="card-dots">
         <span id="sp1"></span> <span id="sp2"></span> <span id="sp3"></span>
       </div>
     </div>
 
-    <!-- Botón para probar JavaScript -->
+    <!-- Botones para probar JavaScript -->
     <ul class="nav">
       <li>
         <button id="colorButton">Cambiar color de fondo</button>

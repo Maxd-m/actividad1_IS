@@ -1,3 +1,4 @@
+/* Fuentes personalizadas */
 @import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Tektur:wght@400..900&display=swap");
 
@@ -34,9 +35,7 @@ button {
   font-size: 16px;
   border: none;
   background-color: #333;
-  /* color: white; */
   color: #ddd;
-
   border-radius: 5px;
   cursor: pointer;
   font-family: orbitron, sans-serif;
@@ -45,51 +44,13 @@ button:hover {
   background-color: #6d6c6c;
 }
 
-.logo {
-  position: absolute;
-  left: 0;
-  padding: 50px;
-  width: 150px; /* Ajusta el tamaño según sea necesario */
-  height: auto;
-  left: 0;
-  font-size: 20px;
-  font-weight: bold;
-  white-space: pre-line; /* Se asegura de que esté por encima de otros elementos */
-}
-
 .header {
   position: relative;
-  text-align: center; /* centra los títulos */
+  text-align: center;
 }
 
 .titles {
   display: inline-block; /* bloque centrado */
-}
-
-#reloj {
-  padding: 20px 40px;
-  border: 3px solid #64a5ef;
-  background-color: #666;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #64a5ef;
-  position: absolute;
-  right: 0;
-  top: 90%;
-  transform: translateY(-50%); /* lo centra verticalmente */
-  font-size: 20px;
-  font-weight: bold;
-  white-space: pre-line;
-}
-
-#reloj .hora {
-  font-size: 60px; /* más grande solo los números */
-  font-weight: bold; /* opcional, para resaltarlos */
-  color: #64a5ef; /* puedes darle otro color */
-}
-
-#reloj .text_hora {
-  font-family: tektur, sans-serif;
-  color: #ddd;
 }
 
 /* Transiciones para el cambio de integrantes */
@@ -120,10 +81,12 @@ button:hover {
 
 /* Estilos para las tarjetas de integrantes */
 
+/* contenedor */
 .card {
   position: relative;
   display: flex;
   align-items: center;
+  flex-direction: row;
   background: white;
   border-radius: 20px;
   padding: 20px;
@@ -144,6 +107,7 @@ button:hover {
   opacity: 1;
 }
 
+/* imagen de la card */
 .card-img img {
   width: 150px;
   height: 150px;
@@ -157,6 +121,7 @@ button:hover {
   flex: 1;
 }
 
+/* titulo de la card */
 .card-content h3 {
   margin: 0;
   font-size: 20px;
@@ -171,6 +136,7 @@ button:hover {
   line-height: 1.4;
 }
 
+/* circulos superiores de la card */
 .card-dots {
   position: absolute;
   top: 10px;
@@ -194,4 +160,94 @@ button:hover {
 }
 #sp3 {
   background: #ff605c;
+}
+
+/* contenedor encabezados */
+.wrap_cont {
+  display: flex;
+  flex-direction: column; /* Columna vertical */
+  align-items: center; /* Centrado horizontal */
+  gap: 20px; /* Espacio entre elementos */
+  margin-top: 20px;
+}
+
+/* logo normal dentro del flujo */
+.logo {
+  width: 150px;
+  height: auto;
+  padding: 20px 40px;
+  position: static;
+}
+
+#reloj {
+  padding: 20px 40px;
+  border: 3px solid #64a5ef;
+  background-color: #666;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #64a5ef;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ddd;
+  position: static; /* quitar absolute */
+  transform: none; /* quitar el translate */
+  white-space: pre-line;
+}
+
+/* numeros del reloj */
+#reloj .hora {
+  font-size: 60px; /* más grande solo los números */
+  font-weight: bold; /* opcional, para resaltarlos */
+  color: #64a5ef; /* puedes darle otro color */
+}
+
+/* texto del reloj */
+#reloj .text_hora {
+  font-family: tektur, sans-serif;
+  color: #ddd;
+}
+
+/* reacomodar encabezados en pantallas grandes */
+@media (min-width: 768px) {
+  .wrap_cont {
+    flex-direction: row; /* Elementos en fila */
+    justify-content: space-between; /* Logo izq, títulos centro, reloj der */
+    align-items: center;
+  }
+
+  .header {
+    flex: 1; /* Empuja títulos al centro */
+    text-align: center;
+  }
+
+  .logo {
+    margin-right: auto; /* Se queda a la izquierda */
+  }
+
+  #reloj {
+    margin-left: auto; /* Se queda a la derecha */
+  }
+}
+
+/* Reacomodar Card en dispositivos moviles */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column; /* Apilar verticalmente */
+    align-items: center; /* Centrar contenido */
+    width: 90%; /* Ancho completo con margen */
+  }
+
+  .card-img img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+  }
+
+  .card-content {
+    margin-left: 0; /* Quitar margen lateral */
+    text-align: center; /* Centrar texto */
+  }
+
+  .card-content h3 {
+    font-size: 18px; /* Texto un poco más pequeño */
+  }
 }
