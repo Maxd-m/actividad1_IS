@@ -11,7 +11,10 @@ const members = [
     desc: "Alumno de ingenieria en sistemas computacionales de 7mo semestre que no le gusta hacer tarea",
   },
 
-  { photo: "alumno2.png", title: "Alumno 2", name: "Monjaras" , desc: "descripcion ..." },
+  { photo: "alumno0.jpg", 
+    title: "Alumno 2",
+    name: "Andres Monjaras" ,
+    desc: "Hola (sin ofender), soy Monjaras, me gusta ayudar a mis amigos:D."},
 ];
 
 const buttonsContainer = document.getElementById("memberButtons");
