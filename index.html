@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PAgina del equipo</title>
+<title>Página del equipo</title>
 <!-- Vinculamos el CSS externo -->
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,15 +14,40 @@
     <div id="reloj"></div>
 </h3>
 
-
-<div id="memebers">
+  <!-- Contenedor donde se mostrará la información de cada integrante -->
+  <!-- <div id="memebers">
     <img src="img/alumno1.png" alt="foto alumno">
-    <p>Alumno de ingenieria en sistemas computacionales de 7mo semestre que no le gusta hacer tarea</p>
+    <h3>Alumno 1</h3>
+    <p>Alumno de ingeniería en sistemas computacionales de 7mo semestre que no le gusta hacer tarea</p>
+  </div> -->
+
+<div class="card">
+  <div class="card-img">
+    <img src="img/alumno1.png" alt="foto alumno">
+  </div>
+  <div class="card-content">
+    <h3>Alumno 1</h3>
+    <h4>Maximiliano Díaz Miranda</h4>
+    <p>Alumno de ingeniería en sistemas computacionales de 7mo semestre que no le gusta hacer tarea.</p>
+
+  </div>
+  <div class="card-dots">
+    <span id="sp1"></span> <span id="sp2"></span> <span id="sp3"></span>
+  </div>
 </div>
 
+
+
 <!-- Botón para probar JavaScript -->
-<button id="colorButton">Cambiar color de fondo</button>
-<button id="switchButton">Cambiar de alumno</button>
+<ul class="nav">
+    <li>
+        <button id="colorButton">Cambiar color de fondo</button>
+    </li>
+    <li>
+        <!-- Contenedor para los botones de selección de integrantes -->
+        <div id="memberButtons"></div>
+    </li>
+</ul>
 <!-- Vinculamos el archivo JS -->
 <script src="script.js"></script>
 </body>
