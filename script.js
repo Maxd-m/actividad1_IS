@@ -53,9 +53,15 @@ button.addEventListener("click", function () {
       minutos = minutos < 10 ? "0" + minutos : minutos;
       segundos = segundos < 10 ? "0" + segundos : segundos;
 
-      document.getElementById("reloj").textContent ="Hora actual:   "+ 
-        `${horas}:${minutos}:${segundos}`;
+      // document.getElementById("reloj").textContent ="Hora actual:\n\n"+ 
+      //   `${horas}`+"\n"+`${minutos}`;
+
+      document.getElementById(
+        "reloj"
+      ).innerHTML = `Hora actual:<br><br><span class="hora">${horas}`+"\n"+`${minutos}</span>`;
+
     }
+    
 
      // Actualiza cada segundo
     setInterval(actualizarReloj, 1000);
@@ -79,19 +85,6 @@ members.forEach((member, i) => {
   buttonsContainer.appendChild(btn);
 });
 
-// function initMemberButtons() {
-//   if (!memberButtonsContainer) return;
-//   memberButtonsContainer.innerHTML = ""; // limpiar por si acaso
-
-//   members.forEach((m, i) => {
-//     const btn = document.createElement("button");
-//     btn.type = "button";
-//     btn.classtitle = "member-btn";
-//     btn.textContent = `Mostrar ${m.title}`;
-//     btn.addEventListener("click", () => showMember(i));
-//     memberButtonsContainer.appendChild(btn);
-//   });
-// }
 
 function showMember(i) {
   if (!card) return;

@@ -30,18 +30,46 @@ button:hover {
 background-color: #0056b3;
 }
 
-img{
-width: 200px;
-height: auto;
-border-radius: 50%;
+
+.header {
+  position: relative;
+  text-align: center; /* centra los títulos */
 }
 
-reloj {
+.titles {
+  display: inline-block; /* bloque centrado */
+}
+
+#cont_reloj {
+      display: inline-block;
+      align-items: right;
+      margin-top: 20px;
+      font-size: 24px;
+      color: #141515;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    
+
+#reloj {
       padding: 20px 40px;
       border: 3px solid #00ffcc;
       border-radius: 20px;
       box-shadow: 0 0 20px #00ffcc;
+      position: absolute;
+      right: 0;
+      top: 90%;
+      transform: translateY(-50%); /* lo centra verticalmente */
+      font-size: 20px;
+      font-weight: bold;
+      white-space: pre-line;
     }
+
+#reloj .hora {
+  font-size: 60px;       /* más grande solo los números */
+  font-weight: bold;     /* opcional, para resaltarlos */
+  color: #0077ff;        /* puedes darle otro color */
+}
 
     /* Transiciones para el cambio de integrantes */
 #memebers {
@@ -81,6 +109,18 @@ reloj {
   margin: 20px auto;
   width: 500px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.08s ease-in-out; /* transición suave */
+  opacity: 1;
+}
+
+/* Estado saliendo */
+.card.fade-out {
+  opacity: 0;
+}
+
+/* Estado entrando */
+.card.fade-in {
+  opacity: 1;
 }
 
 .card-img img {
@@ -133,3 +173,5 @@ reloj {
 #sp3 {
   background: #FF605C;
 }
+
+
