@@ -7,8 +7,8 @@ const members = [
   {
     photo: "alumno1.png",
     title: "Alumno 1",
-    name: "Maximiliano Díaz Miranda",
-    desc: "Alumno de ingenieria en sistemas computacionales de 7mo semestre que no le gusta hacer tarea",
+    name: "Max Díaz Miranda",
+    desc: "Alumno de sistemas en 7mo semestre que no le gusta hacer tarea",
   },
 
   { photo: "alumno0.jpg", 
@@ -58,7 +58,7 @@ button.addEventListener("click", function () {
 
       document.getElementById(
         "reloj"
-      ).innerHTML = `Hora actual:<br><br><span class="hora">${horas}`+"\n"+`${minutos}</span>`;
+      ).innerHTML = `<span class="text_hora">Hora actual:</span><br><br><span class="hora">${horas}`+"\n"+`${minutos}</span>`;
 
     }
     

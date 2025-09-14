@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Tektur:wght@400..900&display=swap');
+
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 15px;
   background-color: #f4f4f4;
   transition: background-color 0.8s ease; /* 👈 transición suave */
 }
@@ -10,24 +13,36 @@ body {
 /* Estilo para el título */
 h1 {
 color: #333;
+font-family: tektur, sans-serif;
+font-size: 46px;
+}
+h2 {
+  font-family: orbitron, sans-serif;
+}
+h4{
+  font-family: monospace, sans-serif;
 }
 /* Estilo para el párrafo */
 p {
 color: #666;
 font-size: 18px;
+font-family: monospace, sans-serif;
 }
 /* Estilo para el botón */
 button {
 padding: 10px 20px;
 font-size: 16px;
 border: none;
-background-color: #007BFF;
-color: white;
+background-color: #333;
+/* color: white; */
+color: #ddd;
+
 border-radius: 5px;
 cursor: pointer;
+font-family: orbitron, sans-serif;
 }
 button:hover {
-background-color: #0056b3;
+background-color: #6d6c6c;
 }
 
 
@@ -39,23 +54,14 @@ background-color: #0056b3;
 .titles {
   display: inline-block; /* bloque centrado */
 }
-
-#cont_reloj {
-      display: inline-block;
-      align-items: right;
-      margin-top: 20px;
-      font-size: 24px;
-      color: #141515;
-      font-family: 'Courier New', Courier, monospace;
-    }
-
-    
+ 
 
 #reloj {
       padding: 20px 40px;
-      border: 3px solid #00ffcc;
+      border: 3px solid #64a5ef;
+      background-color:#666;
       border-radius: 20px;
-      box-shadow: 0 0 20px #00ffcc;
+      box-shadow: 0 0 20px #64a5ef;
       position: absolute;
       right: 0;
       top: 90%;
@@ -68,7 +74,12 @@ background-color: #0056b3;
 #reloj .hora {
   font-size: 60px;       /* más grande solo los números */
   font-weight: bold;     /* opcional, para resaltarlos */
-  color: #0077ff;        /* puedes darle otro color */
+  color: #64a5ef;        /* puedes darle otro color */
+}
+
+#reloj .text_hora {
+  font-family: tektur, sans-serif;
+  color: #ddd;
 }
 
     /* Transiciones para el cambio de integrantes */
@@ -108,7 +119,7 @@ background-color: #0056b3;
   padding: 20px;
   margin: 20px auto;
   width: 500px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.8);
   transition: opacity 0.08s ease-in-out; /* transición suave */
   opacity: 1;
 }
@@ -142,6 +153,7 @@ background-color: #0056b3;
   border-bottom: 3px solid #333;
   display: inline-block;
   padding-bottom: 5px;
+  font-family: orbitron, sans-serif;
 }
 
 .card-content p {
