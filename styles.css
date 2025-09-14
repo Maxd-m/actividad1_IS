@@ -180,12 +180,12 @@ button:hover {
 }
 
 #reloj {
-  padding: 20px 40px;
+  padding: 10px 40px;
   border: 3px solid #64a5ef;
   background-color: #666;
   border-radius: 20px;
   box-shadow: 0 0 20px #64a5ef;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: #ddd;
   position: static; /* quitar absolute */
@@ -195,7 +195,7 @@ button:hover {
 
 /* numeros del reloj */
 #reloj .hora {
-  font-size: 60px; /* más grande solo los números */
+  font-size: 55px; /* más grande solo los números */
   font-weight: bold; /* opcional, para resaltarlos */
   color: #64a5ef; /* puedes darle otro color */
 }

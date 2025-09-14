@@ -12,6 +12,12 @@ El objetivo es crear una página web utilizando **HTML, CSS y JavaScript**, dond
 - Botón para **cambiar de estudiante**.
 - Proyecto colaborativo con uso de **Git y GitHub** para control de versiones.  
 
+---
+
+## 🖥️ Interfaz
+
+A continuación se muestra una vista previa de la interfaz desarrollada: 
+![Vista previa de la interfaz](img/int0.png "Interfaz del proyecto")
 
 <!--
 ---
