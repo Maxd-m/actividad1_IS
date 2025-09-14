@@ -8,7 +8,21 @@ body {
   text-align: center;
   margin-top: 15px;
   background-color: #f4f4f4;
-  transition: background-color 0.8s ease; /* 👈 transición suave */
+  transition: background-color 0.8s ease; /* transición suave */
+}
+
+body::before {
+  content: "";
+  position: fixed; /* fijo para cubrir siempre toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.gifer.com/33HF.gif');
+  background-size: cover; /* ocupa toda la pantalla */
+  background-position: center center;
+  opacity: 0.5; /* transparencia al 50% */
+  z-index: -1; /* se queda detrás del contenido */
 }
 
 /* Estilo para el título */
@@ -87,7 +101,7 @@ button:hover {
   display: flex;
   align-items: center;
   flex-direction: row;
-  background: white;
+  background: rgba(255, 255, 255, 0.731);
   border-radius: 20px;
   padding: 20px;
   margin: 20px auto;
@@ -174,6 +188,7 @@ button:hover {
 /* logo normal dentro del flujo */
 .logo {
   width: 150px;
+  opacity: 0.7;
   height: auto;
   padding: 20px 40px;
   position: static;
@@ -188,22 +203,42 @@ button:hover {
   font-size: 15px;
   font-weight: bold;
   color: #ddd;
-  position: static; /* quitar absolute */
+  position: relative; /* quitar absolute */
+  overflow: hidden;
   transform: none; /* quitar el translate */
   white-space: pre-line;
 }
 
+#reloj::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* cubre todo el reloj */
+  background-image: url('https://media.istockphoto.com/id/893210268/photo/grunge-metal-texture.jpg?s=612x612&w=0&k=20&c=vKXPLWqTAPDAzjUIle4ETiYxUI_LKy6H2mVPi4JfDUk='); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* transparencia de la textura */
+  border-radius: inherit; /* mismo borde redondeado */
+  z-index: 0; /* detrás del texto */
+}
+
+#reloj * {
+  position: relative;
+  z-index: 1; /* texto encima de la textura */
+}
+
 /* numeros del reloj */
 #reloj .hora {
-  font-size: 55px; /* más grande solo los números */
+  font-size: 50px; /* más grande solo los números */
   font-weight: bold; /* opcional, para resaltarlos */
   color: #64a5ef; /* puedes darle otro color */
+  font-family: tektur, sans-serif;
 }
 
 /* texto del reloj */
 #reloj .text_hora {
   font-family: tektur, sans-serif;
   color: #ddd;
+  font-family: orbitron, sans-serif;
 }
 
 /* reacomodar encabezados en pantallas grandes */

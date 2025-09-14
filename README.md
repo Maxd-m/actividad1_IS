@@ -17,7 +17,7 @@ El objetivo es crear una página web utilizando **HTML, CSS y JavaScript**, dond
 ## 🖥️ Interfaz
 
 A continuación se muestra una vista previa de la interfaz desarrollada: 
-![Vista previa de la interfaz](img/int0.png "Interfaz del proyecto")
+![Vista previa de la interfaz](img/int1.png "Interfaz del proyecto")
 
 <!--
 ---
