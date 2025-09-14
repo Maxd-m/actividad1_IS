@@ -1,53 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Página del equipo</title>
-<!-- Vinculamos el CSS externo -->
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página del equipo</title>
+    <!-- Vinculamos el CSS externo -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img src="img/logo.png" alt="Logo" class="logo" />
 
-<div class="header">
-  <div class="titles">
-    <h1>Proyecto de equipo</h1>
-    <h2>THE LEVER TEAM</h2>
-  </div>
-  <h3>
-  <div id="reloj"></div>
-  </h3>
-</div>
+    <div class="header">
+      <div class="titles">
+        <h1>Proyecto de equipo</h1>
+        <h2>THE LEVER TEAM</h2>
+      </div>
+      <h3>
+        <div id="reloj"></div>
+      </h3>
+    </div>
 
+    <div class="card">
+      <div class="card-img">
+        <img src="img/alumno1.png" alt="foto alumno" />
+      </div>
+      <div class="card-content">
+        <h3>Alumno 1</h3>
+        <h4>Max Díaz Miranda</h4>
+        <p>Alumno de sistemas en 7mo semestre que no le gusta hacer tarea.</p>
+      </div>
+      <div class="card-dots">
+        <span id="sp1"></span> <span id="sp2"></span> <span id="sp3"></span>
+      </div>
+    </div>
 
-<div class="card">
-  <div class="card-img">
-    <img src="img/alumno1.png" alt="foto alumno">
-  </div>
-  <div class="card-content">
-    <h3>Alumno 1</h3>
-    <h4>Max Díaz Miranda</h4>
-    <p>Alumno de sistemas en 7mo semestre que no le gusta hacer tarea.</p>
-
-  </div>
-  <div class="card-dots">
-    <span id="sp1"></span> <span id="sp2"></span> <span id="sp3"></span>
-  </div>
-</div>
-
-
-
-<!-- Botón para probar JavaScript -->
-<ul class="nav">
-    <li>
+    <!-- Botón para probar JavaScript -->
+    <ul class="nav">
+      <li>
         <button id="colorButton">Cambiar color de fondo</button>
-    </li>
-    <li>
+      </li>
+      <li>
         <!-- Contenedor para los botones de selección de integrantes -->
         <div id="memberButtons"></div>
-    </li>
-</ul>
-<!-- Vinculamos el archivo JS -->
-<script src="script.js"></script>
-</body>
+      </li>
+    </ul>
+    <!-- Vinculamos el archivo JS -->
+    <script src="script.js"></script>
+  </body>
 </html>
